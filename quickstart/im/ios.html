@@ -22,25 +22,40 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="开发文档">
   <!-- Open Graph -->
-  <meta name="description" content="通过初始化、用户登录、收发消息等集成方法，快速了解和使用 Wilddog IM SDK。
-    环境准备            支持 Xcode 7.0 及以上版本        支持 iOS 7.0 及以上版本    
+  <meta name="description" content="通过以下教程，快速了解和使用 Wilddog IM SDK。
+    环境准备            支持 Xcode 7.0 及以上版本        支持 iOS 8.0 及以上版本    
 
-1. 创建应用Wilddog IM SDK 是以 Wilddog Sync 和 Wilddog Auth 为基础开发的，所以在集成 IM SDK 前，需要先创建 Wilddo">
+1. 创建应用登录 野狗开发账号，在控制面板中创建应用，并获取 AppID。请参考 控制面板-创建应用。
+2. 安装 SDKSDK 的安装方式有两种，你可以任选其一：
+
+使用 CocoaPods 
+
+要">
 <meta property="og:type" content="website">
 <meta property="og:title" content="快速入门">
 <meta property="og:url" content="http://yoursite.com/quickstart/im/ios.html">
 <meta property="og:site_name" content="开发文档">
-<meta property="og:description" content="通过初始化、用户登录、收发消息等集成方法，快速了解和使用 Wilddog IM SDK。
-    环境准备            支持 Xcode 7.0 及以上版本        支持 iOS 7.0 及以上版本    
+<meta property="og:description" content="通过以下教程，快速了解和使用 Wilddog IM SDK。
+    环境准备            支持 Xcode 7.0 及以上版本        支持 iOS 8.0 及以上版本    
 
-1. 创建应用Wilddog IM SDK 是以 Wilddog Sync 和 Wilddog Auth 为基础开发的，所以在集成 IM SDK 前，需要先创建 Wilddo">
-<meta property="og:updated_time" content="2016-11-24T10:05:30.000Z">
+1. 创建应用登录 野狗开发账号，在控制面板中创建应用，并获取 AppID。请参考 控制面板-创建应用。
+2. 安装 SDKSDK 的安装方式有两种，你可以任选其一：
+
+使用 CocoaPods 
+
+要">
+<meta property="og:updated_time" content="2016-11-25T08:18:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="快速入门">
-<meta name="twitter:description" content="通过初始化、用户登录、收发消息等集成方法，快速了解和使用 Wilddog IM SDK。
-    环境准备            支持 Xcode 7.0 及以上版本        支持 iOS 7.0 及以上版本    
+<meta name="twitter:description" content="通过以下教程，快速了解和使用 Wilddog IM SDK。
+    环境准备            支持 Xcode 7.0 及以上版本        支持 iOS 8.0 及以上版本    
 
-1. 创建应用Wilddog IM SDK 是以 Wilddog Sync 和 Wilddog Auth 为基础开发的，所以在集成 IM SDK 前，需要先创建 Wilddo">
+1. 创建应用登录 野狗开发账号，在控制面板中创建应用，并获取 AppID。请参考 控制面板-创建应用。
+2. 安装 SDKSDK 的安装方式有两种，你可以任选其一：
+
+使用 CocoaPods 
+
+要">
 </head>
 
 <body>
@@ -133,22 +148,21 @@
                 </h1>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>通过初始化、用户登录、收发消息等集成方法，快速了解和使用 Wilddog IM SDK。</p>
-<div class="env"><br>    <p class="env-title">环境准备</p><br>    <ul><br>        <li>支持 Xcode 7.0 及以上版本</li><br>        <li>支持 iOS 7.0 及以上版本</li><br>    </ul><br></div>
+                <p>通过以下教程，快速了解和使用 Wilddog IM SDK。</p>
+<div class="env"><br>    <p class="env-title">环境准备</p><br>    <ul><br>        <li>支持 Xcode 7.0 及以上版本</li><br>        <li>支持 iOS 8.0 及以上版本</li><br>    </ul><br></div>
 
-<h2 id="1-创建应用" class="article-heading"><a href="#1-创建应用" class="headerlink" title="1. 创建应用"></a>1. 创建应用</h2><p>Wilddog IM SDK 是以 Wilddog Sync 和 Wilddog Auth 为基础开发的，所以在集成 IM SDK 前，需要先创建 Wilddog 应用来获取 Wilddog AppID。</p>
-<p>在控制面板中创建应用。请参考 <a href="/console/creat.html">控制面板-创建应用</a>。</p>
+<h2 id="1-创建应用" class="article-heading"><a href="#1-创建应用" class="headerlink" title="1. 创建应用"></a>1. 创建应用</h2><p><a href="https://www.wilddog.com/my-account/login" target="_blank" rel="external">登录</a> 野狗开发账号，在控制面板中创建应用，并获取 AppID。请参考 <a href="/console/creat.html">控制面板-创建应用</a>。</p>
 <h2 id="2-安装-SDK" class="article-heading"><a href="#2-安装-SDK" class="headerlink" title="2. 安装 SDK"></a>2. 安装 SDK</h2><p>SDK 的安装方式有两种，你可以任选其一：</p>
 <ul>
 <li><strong>使用 CocoaPods</strong> </li>
 </ul>
-<p>要将 WilddogSync SDK 导入到你的工程中，推荐使用 <a href="https://cocoapods.org/" target="_blank" rel="external">CocoaPods</a>，如果没用过 CocoaPods，请先访问  <a href="https://guides.cocoapods.org/using/getting-started.html" target="_blank" rel="external">CocoaPods getting started</a>。 </p>
+<p>要将 WilddogIM SDK 导入到你的工程中，推荐使用 <a href="https://cocoapods.org/" target="_blank" rel="external">CocoaPods</a>，如果没用过 CocoaPods，请先访问  <a href="https://guides.cocoapods.org/using/getting-started.html" target="_blank" rel="external">CocoaPods getting started</a>。 </p>
 <p>打开工程目录，新建一个 Podfile 文件:</p>
 <pre><code>$ cd your-project-directory
 $ pod init
 $ open -a Xcode Podfile # opens your Podfile in XCode
 </code></pre><p>然后在 Podfile 文件中添加以下语句：</p>
-<pre><code>pod &apos;Wilddog/Sync&apos;
+<pre><code>pod &apos;Wilddog/IM&apos;
 </code></pre><p>最后安装 SDK：</p>
 <pre><code>$ pod install
 $ open your-project.xcworkspace
@@ -158,25 +172,31 @@ $ open your-project.xcworkspace
 </ul>
 <ol>
 <li>下载 Sync SDK <a href="#" class="ios-download-sync" target="_blank">点此下载</a>。 </li>
-<li>下载 Core SDK <a href="#" class="ios-download-core" target="_blank">点此下载</a>。        </li>
-<li>把 WilddogSync.framework 和 WilddogCore.framework 拖到工程目录中。  </li>
+<li>下载 Core SDK <a href="#" class="ios-download-core" target="_blank">点此下载</a>。  </li>
+<li>下载 Auth SDK <a href="#" class="ios-download-auth" target="_blank">点此下载</a>。</li>
+<li>下载 IM SDK <a href="#" class="ios-download-im" target="_blank">点此下载</a>。        </li>
+<li>把 WilddogSync.framework、WilddogCore.framework、WilddogAuth 和 WilddogIM 拖到工程目录中。  </li>
 <li>选中 Copy items if needed 、Create Groups，点击 Finish。  </li>
 <li>点击工程文件 -&gt; TARGETS -&gt; General，在 Linked Frameworks and Libraries 选项中点击 ‘+’，将 JavaScriptCore.framework、 libsqlite3 加入列表中。</li>
 </ol>
 <h2 id="3-初始化" class="article-heading"><a href="#3-初始化" class="headerlink" title="3. 初始化"></a>3. 初始化</h2><p><strong>1.引入头文件</strong></p>
-<figure class="highlight objc"><table><tr><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<figure class="highlight objc"><table><tr><td class="code"><pre><div class="line">＃import &lt;WilddogIM/WilddogIM.h&gt;</div></pre></td></tr></table></figure>
 <p><strong>2.初始化</strong></p>
-<p>在 IM 的一切操作之前，必须先进行一次初始化，设置 Wilddog AppID 和 delegate。可以在 <code>+ clientWithAppID: delegate:</code> 方法中设置。</p>
+<p>调用 <code>+clientWithAppID:delegate:</code> 方法初始化 SDK。</p>
 <figure class="highlight objc"><table><tr><td class="code"><pre><div class="line">[WDGIMClient clientWithAppID:appID delegate:<span class="keyword">self</span>];</div></pre></td></tr></table></figure>
-<p><strong>3.建立连接</strong> </p>
-<p>Wilddog IM SDK 会和 Wilddog 服务器建立一个长连接，以达到能实时接收消息的目的。你可以通过 <code>- connectWithCompletion:</code> 方法来建立连接和监听连接状态。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">// 和 Wilddog 服务器建立连接</div><div class="line">[[WDGIMClient defaultClient] connectWithCompletion:^(BOOL success, NSError * _Nullable error)&#123;</div><div class="line">    // 监听连接状态</div><div class="line">&#125;];</div></pre></td></tr></table></figure>
-<p><strong>4.用户登录</strong>  </p>
-<p>在通常情况下，APP 都会有自己的用户系统，Wilddog 通过 JWT Token 的方式来集成 APP 的已有用户。更多信息请参考 <a href="https://docs.wilddog.com/guide/auth/server/server.html#创建Custom-Token" target="_blank" rel="external">生成 Custom Token</a></p>
-<figure class="highlight objc"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 用 Wilddog Auth Token 登录</span></div><div class="line">[[WDGIMClient defaultClient] signInWithCustomToken:wilddogToken completion:^(WIMUser * _Nullable currentUser, <span class="built_in">NSError</span> * _Nullable error) &#123;</div><div class="line">        </div><div class="line">&#125;];</div><div class="line"></div><div class="line"><span class="meta">## 4. 发起聊天</span></div><div class="line">聊天分为单聊和讨论组，Wilddog IM SDK 不严格区分它们，当聊天人数超过两个人时则自动升级为讨论组，但是不可逆。</div></pre></td></tr></table></figure>
-<p>//创建会话，传入的数组中默认包含登录用户 ID<br>[[WDGIMClient defaultClient] newConversationWithMembers:@[@”UserID”] completion:^(WDGIMConversation <em> _Nullable conversation, NSError </em>__autoreleasing  _Nullable <em> _Nullable error) {<br>     //发文字消息<br>     WDGIMMessageText </em>textMessage = [WDGIMMessage messageWithText:@”Hello, Wilddog!”];<br>     [conversation sendMessage:textMessage completion:^(WDGIMMessage <em> _Nullable msg, NSError </em> _Nullable err) {<br>         //msg 是发送成功后的消息<br>     }];<br>}];<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">## 5. 接收消息</div><div class="line"></div><div class="line">接收消息需要调用 WDGIMClientDelegate 中的代理方法 `- wilddogClient:didRecieveMessages:` ，如果用户是登录状态，SDK 会通过此回调方法收到新消息。</div><div class="line"></div><div class="line">```objc</div><div class="line"></div><div class="line">//实现监听消息的方法</div><div class="line">- (void)wilddogClient:(WDGIMClient *)client didRecieveMessages:(NSArray&lt;WDGIMMessage *&gt; *)messages</div><div class="line">&#123;</div><div class="line">    for (WDGIMMessage *msg in messages) &#123;</div><div class="line">        switch (msg.messageType) &#123;</div><div class="line">            //文本消息</div><div class="line">            case WDGIMMessageTypeText:</div><div class="line">                break;</div><div class="line">                </div><div class="line">            //图片消息</div><div class="line">            case WDGIMMessageTypeImage:</div><div class="line">                break;</div><div class="line">                </div><div class="line">            //语音消息</div><div class="line">            case WDGIMMessageTypeVoice:</div><div class="line">                break;</div><div class="line">                </div><div class="line">            default:</div><div class="line">                break;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="4-集成用户" class="article-heading"><a href="#4-集成用户" class="headerlink" title="4. 集成用户"></a>4. 集成用户</h2><p>Wilddog IM 使用 customToken 的方式来集成开发者的已有用户系统。野狗提供 <a href="/guide/auth/server/server.html">Server SDK</a> 生成 customToken，开发者需要提供用户的 ID、昵称、头像。流程如下：</p>
+<ol>
+<li>客户端向开发者服务器请求 customToken。</li>
+<li>开发者服务器使用野狗 Server SDK 生成 customToken 返回给客户端。</li>
+<li>客户端使用 customToken 登录 Wilddog IM 服务。</li>
+</ol>
+<p>也可以在 <code>IM 控制面板</code> -&gt; <code>接口测试</code> 中生成 Token 用于测试。</p>
+<figure class="highlight objc"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 用 Wilddog Auth Token 登录</span></div><div class="line">[[WDGIMClient defaultClient] signInWithCustomToken:wilddogToken completion:^(WDGIMUser * _Nullable currentUser, <span class="built_in">NSError</span> * _Nullable error) &#123;</div><div class="line">        </div><div class="line">&#125;];</div></pre></td></tr></table></figure>
+<h2 id="5-发起聊天" class="article-heading"><a href="#5-发起聊天" class="headerlink" title="5. 发起聊天"></a>5. 发起聊天</h2><p>发送消息前需要先创建会话和消息体。<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">//创建会话，传入的数组中默认包含登录用户 ID</div><div class="line">[[WDGIMClient defaultClient] newConversationWithMembers:@[@&quot;UserID&quot;] completion:^(WDGIMConversation * _Nullable conversation, NSError *__autoreleasing  _Nullable * _Nullable error) &#123;</div><div class="line">     //发文字消息</div><div class="line">     WDGIMMessageText *textMessage = [WDGIMMessage messageWithText:@&quot;Hello, Wilddog!&quot;];</div><div class="line">     [conversation sendMessage:textMessage completion:^(WDGIMMessage * _Nullable msg, NSError * _Nullable err) &#123;</div><div class="line">         //msg 是发送成功后的消息</div><div class="line">     &#125;];</div><div class="line">&#125;];</div></pre></td></tr></table></figure></p>
+<h2 id="6-接收消息" class="article-heading"><a href="#6-接收消息" class="headerlink" title="6. 接收消息"></a>6. 接收消息</h2><p>在 WDGIMClientDelegate 的代理方法 <code>-wilddogClient:didRecieveMessages:</code> 中接收新消息。</p>
+<figure class="highlight objc"><table><tr><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">//实现监听消息的方法</span></div><div class="line">- (<span class="keyword">void</span>)wilddogClient:(WDGIMClient *)client didRecieveMessages:(<span class="built_in">NSArray</span>&lt;WDGIMMessage *&gt; *)messages</div><div class="line">&#123;</div><div class="line">    <span class="keyword">for</span> (WDGIMMessage *msg <span class="keyword">in</span> messages) &#123;</div><div class="line">        <span class="keyword">switch</span> (msg.messageType) &#123;</div><div class="line">            <span class="comment">//文本消息</span></div><div class="line">            <span class="keyword">case</span> WDGIMMessageTypeText:</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">                </div><div class="line">            <span class="comment">//图片消息</span></div><div class="line">            <span class="keyword">case</span> WDGIMMessageTypeImage:</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">                </div><div class="line">            <span class="comment">//语音消息</span></div><div class="line">            <span class="keyword">case</span> WDGIMMessageTypeVoice:</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">                </div><div class="line">            <span class="keyword">default</span>:</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
-                <time class="article-footer-updated" datetime="2016-11-24T10:05:30.000Z" itemprop="dateModified">上次更新：2016-11-24</time>
+                <time class="article-footer-updated" datetime="2016-11-25T08:18:06.000Z" itemprop="dateModified">上次更新：2016-11-25</time>
               </div>
               <div class="toc-content">
                 <aside id="article-toc" role="navigation">
@@ -185,7 +205,7 @@ $ open your-project.xcworkspace
                       <span class="slide-dot"></span>
                       <div id="article-toc-inner">
                         <strong class="sidebar-title">目录</strong>
-                        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-创建应用"><span class="toc-text">1. 创建应用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-安装-SDK"><span class="toc-text">2. 安装 SDK</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-初始化"><span class="toc-text">3. 初始化</span></a></li></ol>
+                        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-创建应用"><span class="toc-text">1. 创建应用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-安装-SDK"><span class="toc-text">2. 安装 SDK</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-初始化"><span class="toc-text">3. 初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-集成用户"><span class="toc-text">4. 集成用户</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-发起聊天"><span class="toc-text">5. 发起聊天</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-接收消息"><span class="toc-text">6. 接收消息</span></a></li></ol>
                       </div>
                     </div>
                   </div>
