@@ -43,6 +43,19 @@
       <a href="javascript:;" class="main-nav-link">示例代码</a>
       <a href="javascript:;" class="main-nav-link">控制面板指南</a>
     </nav>
+    <div class="searchbar">
+      <div class="search-tips">
+        <img src="/images/search-icon.svg" alt="" width="15" height="15" class="search-icon">
+        <!-- <span class="serach-placeholder">搜索</span> -->
+      </div>
+    </div>
+    <div class="searchbar-inputting">
+      <div class="search-tips">
+        <img src="/images/search-icon.svg" alt="" width="15" height="15" class="search-icon">
+      </div>
+      <input type="text" class="search-input" placeholder="搜索">
+      <span class="close-search"><img src="/images/close.svg" alt=""></span>
+    </div>
     <div class="header-info pull-right">
         <span class="pull-left"><img src="" alt="" class="img-circle profile-avatar" width="24" height="24"></span>
         <span class="user-email"></span>
@@ -91,30 +104,72 @@
     </ul>
   </div>
 </header>
-
+<div class="mask fadeHide"></div>
       <script>
     var path = window.location.pathname;
     if(path === '/') {
       window.location.href = '/overview/index.html'
-    }  
+    }
   </script>
-<header id="banner" class="wrapper">
-  <div class="inner">
-    <h2 id="banner-title"></h2>
-
-  </div>
-</header>
-<div id="content-wrap">
-  <div class="wrapper" style="height:400px">
-    <div class="inner">
-      
-
-      <div id="intro-get-started-wrap">
-        <a href="/overview/" id="intro-get-started-link">阅读文档</a>
+<div id="content" class="wrapper">
+  <div id="content-inner">
+    <div class="article-container">
+      <div class="article-inner">
+        
+        <div class="novice novice-register text-center">
+          <span class="close-novice"></span>
+          <img src="/images/light.svg" width="52" height="56" alt="" class="light">
+          <div class="novice-title">野狗新手？</div>
+          <div class="register-text">立即注册，为你提供安全可靠的实时通信云服务。</div>
+          <div class="btn-group">
+            <a href="https://www.wilddog.com/my-account/signup?next=https://docs.wilddog.com" class="btn btn-org-full register-link">免费注册</a>
+          </div>
+        </div>
+        <div class="novice novice-help text-center">
+          <span class="close-novice"></span>
+          <img src="/images/light.svg" width="52" height="56" alt="" class="light">
+          <div class="novice-title">没找到需要的文档？</div>
+          <div class="register-text">你可以提交工单反馈 或 阅读常见问题</div>
+          <div class="btn-group">
+            <a href="https://www.wilddog.com/account/kf5" target="_blank" class="btn btn-org-empty service-link">客服工单</a><a href="https://wilddog.kf5.com/hc" target="_blank" class="btn btn-gray question-link">常见问题</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
+<!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/public.js"></script>
+<script src="/js/localstorage.js"></script>
+<script src="/js/search.js"></script>
+<script src="/js/search-ui.js"></script>
+<!-- endbuild -->
+
+<!-- Google Tag Manager -->
+<script>
+window.addEventListener('load', function() {
+    (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            '//www.wilddog.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-53PGC2');
+})
+</script>
+<!-- End Google Tag Manager -->
+
+<!-- Algolia -->
+<script src = "https://cdn.wilddog.com/sdk/js/2.0.0/wilddog-sync.js" ></script>
+
     <footer id="footer" class="wrapper">
   <div class="inner">
   <!--   <div id="footer-copyright">
@@ -144,37 +199,5 @@
   </div>
 
 </nav>
-  <!-- Scripts -->
-<!-- build:js build/js/main.js -->
-<script src="/js/localstorage.js"></script>
-<script src="/js/toc.js"></script>
-<script src="/js/mobile_nav.js"></script>
-<script src="/js/ui.js"></script>
-<!-- endbuild -->
-
-<!-- Google Tag Manager -->
-<script>
-window.addEventListener('load', function() {
-    (function(w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-            'gtm.start': new Date().getTime(),
-            event: 'gtm.js'
-        });
-        var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s),
-            dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src =
-            '//www.wilddog.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-53PGC2');
-})
-</script>
-<!-- End Google Tag Manager -->
-
-<!-- Algolia -->
-<script src = "https://cdn.wilddog.com/sdk/js/2.0.0/wilddog-sync.js" ></script>
-
 </body>
 </html>

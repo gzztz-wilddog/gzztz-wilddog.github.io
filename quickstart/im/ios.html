@@ -22,40 +22,40 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="开发文档">
   <!-- Open Graph -->
-  <meta name="description" content="通过以下教程，快速了解和使用 Wilddog IM SDK。
+  <meta name="description" content="你可以通过快速入门教程快速了解 Wilddog IM 的用法。
     环境准备            支持 Xcode 7.0 及以上版本        支持 iOS 8.0 及以上版本    
 
-1. 创建应用登录 野狗开发账号，在控制面板中创建应用，并获取 AppID。请参考 控制面板-创建应用。
+1. 创建应用首先，你需要在控制面板中创建应用。请参考 控制面板-创建应用。
 2. 安装 SDKSDK 的安装方式有两种，你可以任选其一：
 
 使用 CocoaPods 
 
-要">
+要将 WilddogIM S">
 <meta property="og:type" content="website">
 <meta property="og:title" content="快速入门">
 <meta property="og:url" content="http://yoursite.com/quickstart/im/ios.html">
 <meta property="og:site_name" content="开发文档">
-<meta property="og:description" content="通过以下教程，快速了解和使用 Wilddog IM SDK。
+<meta property="og:description" content="你可以通过快速入门教程快速了解 Wilddog IM 的用法。
     环境准备            支持 Xcode 7.0 及以上版本        支持 iOS 8.0 及以上版本    
 
-1. 创建应用登录 野狗开发账号，在控制面板中创建应用，并获取 AppID。请参考 控制面板-创建应用。
+1. 创建应用首先，你需要在控制面板中创建应用。请参考 控制面板-创建应用。
 2. 安装 SDKSDK 的安装方式有两种，你可以任选其一：
 
 使用 CocoaPods 
 
-要">
-<meta property="og:updated_time" content="2016-11-25T08:18:06.000Z">
+要将 WilddogIM S">
+<meta property="og:updated_time" content="2016-11-26T07:13:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="快速入门">
-<meta name="twitter:description" content="通过以下教程，快速了解和使用 Wilddog IM SDK。
+<meta name="twitter:description" content="你可以通过快速入门教程快速了解 Wilddog IM 的用法。
     环境准备            支持 Xcode 7.0 及以上版本        支持 iOS 8.0 及以上版本    
 
-1. 创建应用登录 野狗开发账号，在控制面板中创建应用，并获取 AppID。请参考 控制面板-创建应用。
+1. 创建应用首先，你需要在控制面板中创建应用。请参考 控制面板-创建应用。
 2. 安装 SDKSDK 的安装方式有两种，你可以任选其一：
 
 使用 CocoaPods 
 
-要">
+要将 WilddogIM S">
 </head>
 
 <body>
@@ -73,6 +73,19 @@
       <a href="javascript:;" class="main-nav-link">示例代码</a>
       <a href="javascript:;" class="main-nav-link">控制面板指南</a>
     </nav>
+    <div class="searchbar">
+      <div class="search-tips">
+        <img src="/images/search-icon.svg" alt="" width="15" height="15" class="search-icon">
+        <!-- <span class="serach-placeholder">搜索</span> -->
+      </div>
+    </div>
+    <div class="searchbar-inputting">
+      <div class="search-tips">
+        <img src="/images/search-icon.svg" alt="" width="15" height="15" class="search-icon">
+      </div>
+      <input type="text" class="search-input" placeholder="搜索">
+      <span class="close-search"><img src="/images/close.svg" alt=""></span>
+    </div>
     <div class="header-info pull-right">
         <span class="pull-left"><img src="" alt="" class="img-circle profile-avatar" width="24" height="24"></span>
         <span class="user-email"></span>
@@ -121,7 +134,7 @@
     </ul>
   </div>
 </header>
-
+<div class="mask fadeHide"></div>
     <div id="content-wrap">
   <div id="content" class="wrapper">
     <div id="content-inner">
@@ -148,10 +161,10 @@
                 </h1>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <p>通过以下教程，快速了解和使用 Wilddog IM SDK。</p>
+                <p>你可以通过快速入门教程快速了解 Wilddog IM 的用法。</p>
 <div class="env"><br>    <p class="env-title">环境准备</p><br>    <ul><br>        <li>支持 Xcode 7.0 及以上版本</li><br>        <li>支持 iOS 8.0 及以上版本</li><br>    </ul><br></div>
 
-<h2 id="1-创建应用" class="article-heading"><a href="#1-创建应用" class="headerlink" title="1. 创建应用"></a>1. 创建应用</h2><p><a href="https://www.wilddog.com/my-account/login" target="_blank" rel="external">登录</a> 野狗开发账号，在控制面板中创建应用，并获取 AppID。请参考 <a href="/console/creat.html">控制面板-创建应用</a>。</p>
+<h2 id="1-创建应用" class="article-heading"><a href="#1-创建应用" class="headerlink" title="1. 创建应用"></a>1. 创建应用</h2><p>首先，你需要在控制面板中创建应用。请参考 <a href="/console/creat.html">控制面板-创建应用</a>。</p>
 <h2 id="2-安装-SDK" class="article-heading"><a href="#2-安装-SDK" class="headerlink" title="2. 安装 SDK"></a>2. 安装 SDK</h2><p>SDK 的安装方式有两种，你可以任选其一：</p>
 <ul>
 <li><strong>使用 CocoaPods</strong> </li>
@@ -184,19 +197,26 @@ $ open your-project.xcworkspace
 <p><strong>2.初始化</strong></p>
 <p>调用 <code>+clientWithAppID:delegate:</code> 方法初始化 SDK。</p>
 <figure class="highlight objc"><table><tr><td class="code"><pre><div class="line">[WDGIMClient clientWithAppID:appID delegate:<span class="keyword">self</span>];</div></pre></td></tr></table></figure>
-<h2 id="4-集成用户" class="article-heading"><a href="#4-集成用户" class="headerlink" title="4. 集成用户"></a>4. 集成用户</h2><p>Wilddog IM 使用 customToken 的方式来集成开发者的已有用户系统。野狗提供 <a href="/guide/auth/server/server.html">Server SDK</a> 生成 customToken，开发者需要提供用户的 ID、昵称、头像。流程如下：</p>
+<h2 id="4-集成用户" class="article-heading"><a href="#4-集成用户" class="headerlink" title="4. 集成用户"></a>4. 集成用户</h2><p>Wilddog IM 使用 customToken 的方式来集成开发者的已有用户系统。野狗提供 <a href="/guide/auth/server/server.html">Server SDK</a> 生成 customToken，开发者需要提供用户的 ID、昵称、头像。<br>具体流程如下：</p>
 <ol>
 <li>客户端向开发者服务器请求 customToken。</li>
 <li>开发者服务器使用野狗 Server SDK 生成 customToken 返回给客户端。</li>
 <li>客户端使用 customToken 登录 Wilddog IM 服务。</li>
 </ol>
-<p>也可以在 <code>IM 控制面板</code> -&gt; <code>接口测试</code> 中生成 Token 用于测试。</p>
-<figure class="highlight objc"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 用 Wilddog Auth Token 登录</span></div><div class="line">[[WDGIMClient defaultClient] signInWithCustomToken:wilddogToken completion:^(WDGIMUser * _Nullable currentUser, <span class="built_in">NSError</span> * _Nullable error) &#123;</div><div class="line">        </div><div class="line">&#125;];</div></pre></td></tr></table></figure>
-<h2 id="5-发起聊天" class="article-heading"><a href="#5-发起聊天" class="headerlink" title="5. 发起聊天"></a>5. 发起聊天</h2><p>发送消息前需要先创建会话和消息体。<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">//创建会话，传入的数组中默认包含登录用户 ID</div><div class="line">[[WDGIMClient defaultClient] newConversationWithMembers:@[@&quot;UserID&quot;] completion:^(WDGIMConversation * _Nullable conversation, NSError *__autoreleasing  _Nullable * _Nullable error) &#123;</div><div class="line">     //发文字消息</div><div class="line">     WDGIMMessageText *textMessage = [WDGIMMessage messageWithText:@&quot;Hello, Wilddog!&quot;];</div><div class="line">     [conversation sendMessage:textMessage completion:^(WDGIMMessage * _Nullable msg, NSError * _Nullable err) &#123;</div><div class="line">         //msg 是发送成功后的消息</div><div class="line">     &#125;];</div><div class="line">&#125;];</div></pre></td></tr></table></figure></p>
-<h2 id="6-接收消息" class="article-heading"><a href="#6-接收消息" class="headerlink" title="6. 接收消息"></a>6. 接收消息</h2><p>在 WDGIMClientDelegate 的代理方法 <code>-wilddogClient:didRecieveMessages:</code> 中接收新消息。</p>
+<blockquote class="notice"><br>  <p><strong>提示：</strong></p><br>  你可以在 <code>IM 控制面板</code>-<code>接口测试</code> 中手动生成 Token 用于测试。<br></blockquote>
+
+<h2 id="5-发起聊天" class="article-heading"><a href="#5-发起聊天" class="headerlink" title="5. 发起聊天"></a>5. 发起聊天</h2><p>发起聊天需要三个步骤：</p>
+<ol>
+<li>创建会话</li>
+<li>创建消息体</li>
+<li>发送消息</li>
+</ol>
+<p>例如，发送一条文本消息：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">//创建会话，传入的数组中默认包含登录用户 ID</div><div class="line">[[WDGIMClient defaultClient] newConversationWithMembers:@[@&quot;UserID&quot;] completion:^(WDGIMConversation * _Nullable conversation, NSError *__autoreleasing  _Nullable * _Nullable error) &#123;</div><div class="line">     //创建文字消息</div><div class="line">     WDGIMMessageText *textMessage = [WDGIMMessage messageWithText:@&quot;Hello, Wilddog!&quot;];</div><div class="line">     //发送消息</div><div class="line">     [conversation sendMessage:textMessage completion:^(WDGIMMessage * _Nullable msg, NSError * _Nullable err) &#123;</div><div class="line">         //msg 是发送成功后的消息</div><div class="line">     &#125;];</div><div class="line">&#125;];</div></pre></td></tr></table></figure>
+<h2 id="6-接收消息" class="article-heading"><a href="#6-接收消息" class="headerlink" title="6. 接收消息"></a>6. 接收消息</h2><p>WDGIMClientDelegate 的代理方法  <code>-wilddogClient:didRecieveMessages:</code> 用于接收新消息。</p>
 <figure class="highlight objc"><table><tr><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">//实现监听消息的方法</span></div><div class="line">- (<span class="keyword">void</span>)wilddogClient:(WDGIMClient *)client didRecieveMessages:(<span class="built_in">NSArray</span>&lt;WDGIMMessage *&gt; *)messages</div><div class="line">&#123;</div><div class="line">    <span class="keyword">for</span> (WDGIMMessage *msg <span class="keyword">in</span> messages) &#123;</div><div class="line">        <span class="keyword">switch</span> (msg.messageType) &#123;</div><div class="line">            <span class="comment">//文本消息</span></div><div class="line">            <span class="keyword">case</span> WDGIMMessageTypeText:</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">                </div><div class="line">            <span class="comment">//图片消息</span></div><div class="line">            <span class="keyword">case</span> WDGIMMessageTypeImage:</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">                </div><div class="line">            <span class="comment">//语音消息</span></div><div class="line">            <span class="keyword">case</span> WDGIMMessageTypeVoice:</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">                </div><div class="line">            <span class="keyword">default</span>:</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
-                <time class="article-footer-updated" datetime="2016-11-25T08:18:06.000Z" itemprop="dateModified">上次更新：2016-11-25</time>
+                <time class="article-footer-updated" datetime="2016-11-26T07:13:33.000Z" itemprop="dateModified">上次更新：2016-11-26</time>
               </div>
               <div class="toc-content">
                 <aside id="article-toc" role="navigation">
@@ -249,6 +269,40 @@ $ open your-project.xcworkspace
     </div>
   </div>
 </div>
+<!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/public.js"></script>
+<script src="/js/localstorage.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<script src="/js/ui.js"></script>
+<script src="/js/search.js"></script>
+<!-- endbuild -->
+
+<!-- Google Tag Manager -->
+<script>
+window.addEventListener('load', function() {
+    (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            '//www.wilddog.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-53PGC2');
+})
+</script>
+<!-- End Google Tag Manager -->
+
+<!-- Algolia -->
+<script src = "https://cdn.wilddog.com/sdk/js/2.0.0/wilddog-sync.js" ></script>
+
 
     <footer id="footer" class="wrapper">
   <div class="inner">
@@ -281,37 +335,5 @@ $ open your-project.xcworkspace
   </div>
 
 </nav>
-  <!-- Scripts -->
-<!-- build:js build/js/main.js -->
-<script src="/js/localstorage.js"></script>
-<script src="/js/toc.js"></script>
-<script src="/js/mobile_nav.js"></script>
-<script src="/js/ui.js"></script>
-<!-- endbuild -->
-
-<!-- Google Tag Manager -->
-<script>
-window.addEventListener('load', function() {
-    (function(w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-            'gtm.start': new Date().getTime(),
-            event: 'gtm.js'
-        });
-        var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s),
-            dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src =
-            '//www.wilddog.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-53PGC2');
-})
-</script>
-<!-- End Google Tag Manager -->
-
-<!-- Algolia -->
-<script src = "https://cdn.wilddog.com/sdk/js/2.0.0/wilddog-sync.js" ></script>
-
 </body>
 </html>

@@ -60,6 +60,19 @@
       <a href="javascript:;" class="main-nav-link">示例代码</a>
       <a href="javascript:;" class="main-nav-link">控制面板指南</a>
     </nav>
+    <div class="searchbar">
+      <div class="search-tips">
+        <img src="/images/search-icon.svg" alt="" width="15" height="15" class="search-icon">
+        <!-- <span class="serach-placeholder">搜索</span> -->
+      </div>
+    </div>
+    <div class="searchbar-inputting">
+      <div class="search-tips">
+        <img src="/images/search-icon.svg" alt="" width="15" height="15" class="search-icon">
+      </div>
+      <input type="text" class="search-input" placeholder="搜索">
+      <span class="close-search"><img src="/images/close.svg" alt=""></span>
+    </div>
     <div class="header-info pull-right">
         <span class="pull-left"><img src="" alt="" class="img-circle profile-avatar" width="24" height="24"></span>
         <span class="user-email"></span>
@@ -108,7 +121,7 @@
     </ul>
   </div>
 </header>
-
+<div class="mask fadeHide"></div>
     <div id="content-wrap">
   <div id="content" class="wrapper">
     <div id="content-inner">
@@ -224,6 +237,40 @@
     </div>
   </div>
 </div>
+<!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/public.js"></script>
+<script src="/js/localstorage.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<script src="/js/ui.js"></script>
+<script src="/js/search.js"></script>
+<!-- endbuild -->
+
+<!-- Google Tag Manager -->
+<script>
+window.addEventListener('load', function() {
+    (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            '//www.wilddog.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-53PGC2');
+})
+</script>
+<!-- End Google Tag Manager -->
+
+<!-- Algolia -->
+<script src = "https://cdn.wilddog.com/sdk/js/2.0.0/wilddog-sync.js" ></script>
+
 
     <footer id="footer" class="wrapper">
   <div class="inner">
@@ -256,37 +303,5 @@
   </div>
 
 </nav>
-  <!-- Scripts -->
-<!-- build:js build/js/main.js -->
-<script src="/js/localstorage.js"></script>
-<script src="/js/toc.js"></script>
-<script src="/js/mobile_nav.js"></script>
-<script src="/js/ui.js"></script>
-<!-- endbuild -->
-
-<!-- Google Tag Manager -->
-<script>
-window.addEventListener('load', function() {
-    (function(w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-            'gtm.start': new Date().getTime(),
-            event: 'gtm.js'
-        });
-        var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s),
-            dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src =
-            '//www.wilddog.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-53PGC2');
-})
-</script>
-<!-- End Google Tag Manager -->
-
-<!-- Algolia -->
-<script src = "https://cdn.wilddog.com/sdk/js/2.0.0/wilddog-sync.js" ></script>
-
 </body>
 </html>
