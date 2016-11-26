@@ -24,46 +24,43 @@
   <!-- Open Graph -->
   <meta name="description" content="本篇文档介绍如何使用离线推送。
 用户进入应用后台或者断开与 Wilddog 服务器的连接的时候，收到的消息将通过推送通知的形式传递给用户，用户可以自定义点击推送通知之后的操作。
-离线推送分为以下三个步骤：
+离线推送分为以下两个步骤：
 
 配置推送证书
 绑定 deviceToken。
-处理推送数据。
 
 配置推送证书首先，你需要在 控制面板-即时通讯-基本配置-iOS配置 中配置 APNs 证书。
 
-绑定 deviceToken-">
+绑定 deviceToken-updateRe">
 <meta property="og:type" content="website">
 <meta property="og:title" content="离线推送">
 <meta property="og:url" content="http://yoursite.com/guide/im/ios/push.html">
 <meta property="og:site_name" content="开发文档">
 <meta property="og:description" content="本篇文档介绍如何使用离线推送。
 用户进入应用后台或者断开与 Wilddog 服务器的连接的时候，收到的消息将通过推送通知的形式传递给用户，用户可以自定义点击推送通知之后的操作。
-离线推送分为以下三个步骤：
+离线推送分为以下两个步骤：
 
 配置推送证书
 绑定 deviceToken。
-处理推送数据。
 
 配置推送证书首先，你需要在 控制面板-即时通讯-基本配置-iOS配置 中配置 APNs 证书。
 
-绑定 deviceToken-">
-<meta property="og:image" content="http://ocpo37x5v.bkt.clouddn.com/2016-11-26-iOS%20push.jpg">
-<meta property="og:updated_time" content="2016-11-26T06:45:27.000Z">
+绑定 deviceToken-updateRe">
+<meta property="og:image" content="http://ocpo37x5v.bkt.clouddn.com/2016-11-26-im-ios-push.png">
+<meta property="og:updated_time" content="2016-11-26T09:48:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="离线推送">
 <meta name="twitter:description" content="本篇文档介绍如何使用离线推送。
 用户进入应用后台或者断开与 Wilddog 服务器的连接的时候，收到的消息将通过推送通知的形式传递给用户，用户可以自定义点击推送通知之后的操作。
-离线推送分为以下三个步骤：
+离线推送分为以下两个步骤：
 
 配置推送证书
 绑定 deviceToken。
-处理推送数据。
 
 配置推送证书首先，你需要在 控制面板-即时通讯-基本配置-iOS配置 中配置 APNs 证书。
 
-绑定 deviceToken-">
-<meta name="twitter:image" content="http://ocpo37x5v.bkt.clouddn.com/2016-11-26-iOS%20push.jpg">
+绑定 deviceToken-updateRe">
+<meta name="twitter:image" content="http://ocpo37x5v.bkt.clouddn.com/2016-11-26-im-ios-push.png">
 </head>
 
 <body>
@@ -171,19 +168,17 @@
               <div class="article-content" itemprop="articleBody">
                 <p>本篇文档介绍如何使用离线推送。</p>
 <p>用户进入应用后台或者断开与 Wilddog 服务器的连接的时候，收到的消息将通过推送通知的形式传递给用户，用户可以自定义点击推送通知之后的操作。</p>
-<p>离线推送分为以下三个步骤：</p>
+<p>离线推送分为以下两个步骤：</p>
 <ol>
 <li>配置推送证书</li>
 <li>绑定 deviceToken。</li>
-<li>处理推送数据。</li>
 </ol>
 <h2 id="配置推送证书" class="article-heading"><a href="#配置推送证书" class="headerlink" title="配置推送证书"></a>配置推送证书</h2><p>首先，你需要在 控制面板-即时通讯-基本配置-iOS配置 中配置 APNs 证书。</p>
-<p><img src="http://ocpo37x5v.bkt.clouddn.com/2016-11-26-iOS%20push.jpg" alt=""></p>
+<p><img src="http://ocpo37x5v.bkt.clouddn.com/2016-11-26-im-ios-push.png" alt=""></p>
 <h2 id="绑定-deviceToken" class="article-heading"><a href="#绑定-deviceToken" class="headerlink" title="绑定 deviceToken"></a>绑定 deviceToken</h2><p><code>-updateRemoteNotificationDeviceToken:error:</code> 方法用于绑定 deviceToken：</p>
 <figure class="highlight objc"><table><tr><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)application:(<span class="built_in">UIApplication</span> *)application didRegisterForRemoteNotificationsWithDeviceToken:(<span class="built_in">NSData</span> *)deviceToken</div><div class="line">&#123;</div><div class="line">    [[WDGIMClient defaultClient] updateRemoteNotificationDeviceToken:deviceToken error:<span class="literal">nil</span>];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="处理推送数据" class="article-heading"><a href="#处理推送数据" class="headerlink" title="处理推送数据"></a>处理推送数据</h2><p><code>-synchronizeWithRemoteNotification:completion:</code> 方法用于将收到的消息同步给 Wilddog IM SDK：</p>
-<figure class="highlight objc"><table><tr><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)application:(<span class="built_in">UIApplication</span> *)application didReceiveRemoteNotification:(<span class="built_in">NSDictionary</span> *)userInfo&#123;</div><div class="line">    </div><div class="line">   [[WDGIMClient defaultClient] synchronizeWithRemoteNotification:userInfo completion:^(WDGIMConversation * _Nullable conversation, WDGIMMessage * _Nullable message, <span class="built_in">NSError</span> * _Nullable error) &#123;</div><div class="line">        </div><div class="line">   &#125;];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-                <time class="article-footer-updated" datetime="2016-11-26T06:45:27.000Z" itemprop="dateModified">上次更新：2016-11-26</time>
+
+                <time class="article-footer-updated" datetime="2016-11-26T09:48:56.000Z" itemprop="dateModified">上次更新：2016-11-26</time>
               </div>
               <div class="toc-content">
                 <aside id="article-toc" role="navigation">
@@ -192,7 +187,7 @@
                       <span class="slide-dot"></span>
                       <div id="article-toc-inner">
                         <strong class="sidebar-title">目录</strong>
-                        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#配置推送证书"><span class="toc-text">配置推送证书</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#绑定-deviceToken"><span class="toc-text">绑定 deviceToken</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#处理推送数据"><span class="toc-text">处理推送数据</span></a></li></ol>
+                        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#配置推送证书"><span class="toc-text">配置推送证书</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#绑定-deviceToken"><span class="toc-text">绑定 deviceToken</span></a></li></ol>
                       </div>
                     </div>
                   </div>

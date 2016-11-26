@@ -34,7 +34,7 @@
     环境准备            支持 Android Studio 1.4 以上或者 Eclipse ADT 15.0.0 以上版本        支持 JDK 7.0 以上版本        支持 Android 手机系统 4.0.3以上版本，即 Android SDK 15 以上版本    
 
 1. 创建应用首先，你需要在控制">
-<meta property="og:updated_time" content="2016-11-26T08:19:38.000Z">
+<meta property="og:updated_time" content="2016-11-26T08:49:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="快速入门">
 <meta name="twitter:description" content="你可以通过以下教程快速了解 Wilddog IM 的用法。
@@ -153,7 +153,7 @@
 <h2 id="2-安装-SDK" class="article-heading"><a href="#2-安装-SDK" class="headerlink" title="2. 安装 SDK"></a>2. 安装 SDK</h2><p>1.安装 Wilddog IM SDK：<br>Android Studio 使用 Gradle 添加 Wilddog IM 的依赖。在你的 build.gradle 添加：</p>
 <figure class="highlight java"><table><tbody><tr><td class="code"><pre><div class="line">compile <span class="string">&apos;com.wilddog.client:wilddog-IM-android:<span class="android-auth-version"></span>&apos;</span></div></pre></td></tr></tbody></table></figure>
 
-<p>2.工程配置<br>Wilddog IM 解决方案在 Android 上需要 android.permission.INTERNET 权限。你需要在 AndroidMainfest.xml 文件添加以下内容：<br><a href="http://ocpo37x5v.bkt.clouddn.com/WilddogIM.xml" target="_blank" rel="external">xml 添加内容</a></p>
+<p>2.工程配置<br>Wilddog IM 解决方案在 Android 上需要 android.permission.INTERNET 权限。你需要在 AndroidMainfest.xml 文件添加以下内容：<br><a href="http://ocpo37x5v.bkt.clouddn.com/im-android.html" target="_blank" rel="external">xml 添加内容</a></p>
 <h2 id="3-初始化" class="article-heading"><a href="#3-初始化" class="headerlink" title="3. 初始化"></a>3. 初始化</h2><p><strong>1.引入SDK</strong></p>
 <figure class="highlight java"><table><tbody><tr><td class="code"><pre><div class="line">compile <span class="string">&apos;com.wilddog.client:wilddog-IM-android:<span class="android-auth-version"></span>&apos;</span></div></pre></td></tr></tbody></table></figure>
 
@@ -172,7 +172,7 @@
 <h2 id="6-接收消息" class="article-heading"><a href="#6-接收消息" class="headerlink" title="6. 接收消息"></a>6. 接收消息</h2><p>在 <code>WilddogIMClient.WilddogIMMessageListener</code> 的代理方法 <code>onNewMessage（）</code> 中接收新消息。</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><div class="line"><span class="keyword">private</span> WilddogIMClient.WilddogIMMessageListener listener=<span class="keyword">new</span> WilddogIMClient.WilddogIMMessageListener() &#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNewMessage</span><span class="params">(List&lt;com.wilddog.wildim.message.Message&gt; messages)</span> </span>&#123;</div><div class="line">        <span class="keyword">for</span>(com.wilddog.wildim.message.Message wildMessage:messages)&#123;</div><div class="line">            <span class="keyword">switch</span> (message.getMessageType()) &#123;</div><div class="line"></div><div class="line">            <span class="keyword">case</span> TEXT:</div><div class="line">            <span class="comment">//文本消息</span></div><div class="line">            TextMessage textMessage = (TextMessage)message;</div><div class="line"></div><div class="line">            <span class="keyword">case</span> IMAGE:</div><div class="line">            <span class="comment">//图片消息</span></div><div class="line">            ImageMessage imageMessage = (ImageMessage)message;</div><div class="line"></div><div class="line">            <span class="keyword">case</span> VOICE:</div><div class="line">            <span class="comment">//语音消息</span></div><div class="line">            VoiceMessage voiceMessage = (VoiceMessage)message;</div><div class="line"></div><div class="line">           &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 
-                <time class="article-footer-updated" datetime="2016-11-26T08:19:38.000Z" itemprop="dateModified">上次更新：2016-11-26</time>
+                <time class="article-footer-updated" datetime="2016-11-26T08:49:34.000Z" itemprop="dateModified">上次更新：2016-11-26</time>
               </div>
               <div class="toc-content">
                 <aside id="article-toc" role="navigation">
